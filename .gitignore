@@ -416,3 +416,108 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# --- Python (backend) ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.coverage*
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+.mypy_cache/
+.pytype/
+.ruff_cache/
+*.log
+*.sqlite3
+
+# --- FastAPI/Uvicorn runtime ---
+*.pid
+*.pid.lock
+
+# --- Node / Vite (frontend in app/) ---
+app/node_modules/
+app/dist/
+app/.vite/
+app/.eslintcache
+app/.cache/
+# lockfiles are committed on purpose: package-lock.json / pnpm-lock.yaml / yarn.lock
+
+# --- Environment & secrets ---
+*.env
+*.env.*
+!.env.example
+
+# --- GIS / data (large/generated) ---
+cache/
+.osmnx_cache/
+.osm/                         # if you stage raw OSM extracts here
+*.osm
+*.osm.pbf
+*.pbf
+*.mbtiles
+*.tif
+*.tiff
+*.jp2
+*.img
+*.vrt
+*.gpkg
+*.shp
+*.shx
+*.dbf
+*.prj
+*.qpj
+*.sbn
+*.sbx
+*.cpg
+*.kml
+*.kmz
+*.gdb
+*.fgb
+*.qgz
+*.qgs
+*.aux.xml
+*.idx
+*.lock
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.geojson.gz
+
+# Keep small sample/demo data only
+data/*
+!data/README.md
+!data/samples/**
+# If you want to keep a tiny demo hazard/roads file, put them in data/samples/
+
+# --- Model / training artifacts ---
+finetune/out/
+finetune/checkpoints/
+wandb/
+mlruns/
+
+# --- Misc tools ---
+*.swp
+*.swo
+*.tmp
+*.bak
+*.~*

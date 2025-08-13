@@ -1,0 +1,10 @@
+{"messages":[
+  {"role":"system","content":"Return ONLY JSON per the Plan schema."},
+  {"role":"user","content":"{\"prompt\":\"Evac plan for bbox [-122.52,37.70,-122.35,37.83]\",\"context\":{\"start\":[-122.42,37.77],\"end\":[-122.35,37.80]}}"},
+  {"role":"assistant","content":"{\"summary\":\"Evacuate east via arterials; avoid flood polygon FZ-1.\",\"phases\":[{\"name\":\"Activation\",\"eta_minutes\":[0,5],\"actions\":[\"Open EOC\",\"Notify EMS\"]},{\"name\":\"Evacuation\",\"eta_minutes\":[15,120],\"actions\":[\"Stage buses at Civic Center\",\"Open eastbound contraflow if needed\"]}],\"evac_routes\":[{\"purpose\":\"primary\",\"start\":[-122.42,37.77],\"end\":[-122.35,37.80],\"notes\":\"Use primary arterials; avoid FZ-1\"}],\"resources\":{\"personnel\":[\"EMS\",\"Traffic Control\"],\"supplies\":[\"Water\",\"First aid\"],\"staging_areas\":[\"Civic Center\"]},\"communications\":[\"Wireless alerts\",\"NOAA radio\"],\"risks\":[\"Bridge congestion\",\"Aftershocks\"]}"}
+]}
+{"messages":[
+  {"role":"system","content":"Return ONLY JSON per the Plan schema."},
+  {"role":"user","content":"{\"prompt\":\"Wildfire south; smoke blowing north. Draft plan.\",\"context\":{}}"},
+  {"role":"assistant","content":"{\"summary\":\"Shelter-in-place in sectors A/B; prep phased evac if AQI>200.\",\"phases\":[{\"name\":\"Assessment\",\"eta_minutes\":[0,15],\"actions\":[\"Map fire perimeter\",\"Monitor wind\",\"Issue AQI updates\"]},{\"name\":\"Contingency\",\"eta_minutes\":[30,120],\"actions\":[\"Prep buses\",\"Identify clean-air shelters\"]}],\"evac_routes\":[],\"resources\":{\"personnel\":[\"Fire\",\"EMS\"],\"supplies\":[\"N95\",\"Water\"],\"staging_areas\":[\"High school lot\"]},\"communications\":[\"PA\",\"AM radio\"],\"risks\":[\"Smoke inhalation\",\"Wind shift\"]}"}
+]}
