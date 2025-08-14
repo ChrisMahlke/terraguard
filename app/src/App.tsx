@@ -340,7 +340,7 @@ export default function App() {
           <code>.geojson</code> (e.g., hazard polygon) onto the map.
         </div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-          <button onClick={getRoute}>Get Demo Route</button>
+          <button onClick={getRoute}>Get Demo Route (straight)</button>
           <button onClick={agentPlan}>Agent Plan</button>
           <button onClick={draftPlan}>Draft Plan (JSON)</button>
           <button onClick={toggleOffline}>
