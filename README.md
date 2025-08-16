@@ -1,3 +1,344 @@
 # Terraguard
 
-Local, offline disaster response copilot (Best Local Agent / For Humanity)
+**Terraguard** is an offline-first disaster response triage tool built for the _OpenAI Open Model Hackathon_. It runs locally, uses open-weight reasoning models (e.g., **gpt-oss-20b**) via **Ollama**, and converts messy incident text (SMS, radio, social) into **structured JSON**, **ICS forms**, and **concise radio phrasing**—with strong guardrails and an accessible, mobile-friendly UI.
+
+> Primary goals for judges:
+>
+> - **Best Local Agent**: full functionality without internet.
+> - **Most Useful Fine-Tune**: swap in a LoRA-fine-tuned model that outperforms the base for extraction + ICS fidelity.
+> - **Design & Safety**: WCAG-aligned UI, clear abstentions, and no hallucinated coordinates.
+
+---
+
+## Features
+
+- **Offline extraction** from free text → strict JSON schema (no prose, no coords).
+- **ICS-213 / ICS-214** helpers and **radio phrasing (EN/ES)**.
+- **Model Switcher**: Base / Ensemble / (later) Fine-tuned.
+- **Compare Dialog**: one-click A/B for Base vs Ensemble vs Fine with latency.
+- **Eval Page**: quick JSON-valid/latency checks over a small dataset.
+- **Synthetic data pipeline** to bootstrap fine-tuning.
+- **Mobile-friendly, MUI (Material UI), WCAG-targeted** design.
+
+---
+
+## Tech stack
+
+- **Next.js 15** (App Router) + **React 18**, **TypeScript**
+- **Redux Toolkit** for state
+- **MUI (Material UI)** for accessible, responsive UI
+- **Ollama** for local LLM inference (default `http://127.0.0.1:11434`)
+- **Python** scripts for data synthesis, SFT formatting, and quick evals
+
+---
+
+## Quickstart (5 minutes)
+
+### 0) Prerequisites
+
+- Node.js **>= 20**
+- Python **>= 3.10**
+- **Ollama** installed and running locally <small>(We assume a local model tag like `gpt-oss:20b`. If you use a different tag, set it in the UI or via API.)</small>
+
+### 1) Install dependencies
+
+```bash
+npm install
+```
+
+### 2) Start servers (two terminals)
+
+**Terminal A — Next.js**
+
+```bash
+npm run dev
+# shows Local: http://localhost:3000
+```
+
+**Terminal B — Ollama**
+
+```bash
+ollama serve
+# If it says "address already in use", it's already running.
+```
+
+> Optional: If Ollama is not at the default address, create `.env.local`:
+>
+> ```
+> OLLAMA_BASE=http://127.0.0.1:11435
+> ```
+
+### 3) Open the app
+
+Visit `http://localhost:3000`
+
+- Paste a report like:
+
+  ```
+  Bridge on Pine St is cracked, 2:15pm, 5 people trapped on the south side, need medical and rescue.
+  ```
+
+- Click **Extract**.
+- Try **Compare** (Base vs Ensemble).
+- Explore **/eval** to batch-check JSON validity/latency.
+
+---
+
+## Project layout (what each file/folder is for)
+
+```
+terraguard/
+├─ src/                         # All app code
+│  ├─ app/                      # Next.js App Router pages + API routes
+│  │  ├─ api/
+│  │  │  ├─ extract/
+│  │  │  │  ├─ route.ts         # POST /api/extract — single-model extraction (Base or Fine)
+│  │  │  │  └─ stream/route.ts  # POST /api/extract/stream — NDJSON streaming for live console
+│  │  │  └─ extract/ensemble/   # (existing in repo) POST /api/extract/ensemble — 3× sample + vote
+│  │  ├─ eval/page.tsx          # /eval — quick eval UI (valid JSON & latency)
+│  │  ├─ layout.tsx             # Root layout — wires MUI cache + Redux provider
+│  │  ├─ mui-provider.tsx       # Client MUI theme + CssBaseline (dark, accessible contrast)
+│  │  ├─ page.tsx               # Home — renders AppHeader + ReportTriage
+│  │  └─ redux-provider.tsx     # Redux <Provider> wrapper
+│  ├─ components/
+│  │  ├─ AppHeader.tsx          # Top app bar + Model Switcher + link to /eval
+│  │  ├─ ReportTriage.tsx       # Main screen: textarea, Extract, list of reports, dialogs, console
+│  │  ├─ CompareDialog.tsx      # Side-by-side Base / Ensemble / Fine comparison + latency
+│  │  ├─ ICS213Dialog.tsx       # (existing) Build ICS-213 JSON from a selected report
+│  │  ├─ ICS214Dialog.tsx       # (existing) Build ICS-214 from a selection (batch)
+│  │  ├─ RadioDialog.tsx        # (existing) Short radio phrasing EN/ES
+│  │  └─ SITREPDialog.tsx       # (existing) Situation report (if enabled)
+│  ├─ lib/
+│  │  └─ store.ts               # Redux store configuration
+│  └─ slices/
+│     ├─ modelSlice.ts          # Global model selection (base / ensemble / fine + tags)
+│     ├─ reportsSlice.ts        # Extracted report entities & async thunks to /api
+│     └─ knowledgeSlice.ts      # Local “knowledge” for risk scoring & suggestions
+├─ public/
+│  ├─ assets/                   # Static SVGs/icons
+│  └─ data/
+│     └─ demo_reports.txt       # Sample reports used by “Load demo set”
+├─ data/
+│  ├─ schema/
+│  │  ├─ extract.schema.json    # JSON Schema for extractor output
+│  │  ├─ ics213.schema.json     # JSON Schema for ICS-213
+│  │  └─ radio.schema.json      # JSON Schema for radio {en,es}
+│  ├─ samples/
+│  │  ├─ eval_extract.jsonl     # Small hand-written eval set (text + gold JSON)
+│  │  ├─ eval_ics213.jsonl      # Small eval set for ICS-213
+│  │  └─ eval_radio.jsonl       # Small eval set for radio phrasing
+│  └─ synthetic/                # Generated by scripts/synthesize_data.py
+├─ scripts/
+│  ├─ synthesize_data.py        # Create synthetic extract/ics213/radio JSONL (safe + bilingual)
+│  ├─ merge_for_sft.py          # Merge to single SFT chat JSONL for QLoRA
+│  ├─ eval_extract_http.py      # Calls your local API to benchmark Base vs Ensemble
+│  └─ requirements.txt          # tqdm dependency for scripts
+├─ next.config.ts               # Next build config
+├─ tsconfig.json                # TypeScript config
+├─ package.json                 # Dev/build scripts + deps
+└─ README.md                    # You are here
+```
+
+### A few key implementation notes
+
+- **/api/extract/route.ts**
+  Builds a strict **system prompt** and calls Ollama `/api/generate`.
+  It **parses JSON robustly** (handles stray code fences, balanced braces, `<json>…</json>` fallbacks) and **coerces** to the canonical shape:
+
+  ```ts
+  {
+    reports: Array<{ location_text; time_iso; severity; needs; notes? }>;
+  }
+  ```
+
+  It rejects hallucinated coords and normalizes `null` fields safely.
+
+- **/api/extract/stream/route.ts**
+  Same prompt but **streams NDJSON**: status, token chunks, final parsed JSON.
+  Powers the **AI console** in ReportTriage.
+
+- **/api/extract/ensemble/route.ts** (already present)
+  Runs multiple samples (e.g., `n=3`) and selects a **majority-valid** JSON, providing more stability for tricky inputs.
+
+- **Redux slices**
+
+  - `modelSlice.ts`: stores selected model **kind** and **Ollama tags** (`gpt-oss:20b` for base, `terraguard-ft:20b` for fine).
+  - `reportsSlice.ts`: unified data model for extracted reports + thunks for `/api/extract*`.
+  - `knowledgeSlice.ts`: demo “knowledge” (e.g., facilities) to annotate reports with **risk** and **destinations**.
+
+- **UI components**
+
+  - `ReportTriage.tsx` contains the primary flow: paste → extract → edit → generate ICS/radio.
+
+    - **Compare** opens `CompareDialog` to A/B models.
+    - **Show AI console** streams raw tokens + parsed events (Base model only).
+    - Cards show **confidence**, **risk**, and accessibility-friendly controls.
+
+---
+
+## Running & configuring
+
+### Development
+
+```bash
+# app server
+npm run dev
+
+# (separate terminal) local model server
+ollama serve
+```
+
+If Ollama isn’t at `127.0.0.1:11434`, set an environment variable (Next.js):
+
+```
+# .env.local
+OLLAMA_BASE=http://127.0.0.1:11435
+```
+
+### Build & start (production)
+
+```bash
+npm run build
+npm run start
+```
+
+---
+
+## Using the app
+
+1. **Model Switcher** (top-right):
+
+   - **Ensemble** (default): 3× sampling + voting → robust JSON.
+   - **Base**: single pass; enables the **AI console** streaming demo.
+   - **Fine**: points to your **LoRA/merged** tag once trained (change in Settings or via `modelSlice`).
+
+2. **Paste reports** → **Extract**.
+
+   - The list shows each **Extracted report** with:
+
+     - editable fields,
+     - **risk bar** and **confidence badges**,
+     - actions: **ICS-213**, **Radio (EN/ES)**, delete, reset/save.
+
+3. **Compare**: Run Base/Ensemble/Fine **side-by-side** (latency + JSON).
+
+4. **/eval**: paste multiple inputs (one per line) → see **valid JSON rate** & **avg latency** for Base vs Ensemble.
+
+---
+
+## Data & fine-tuning workflow
+
+> This repo ships with a **data pipeline** to generate safe synthetic pairs, merge to an SFT file, and quickly evaluate.
+
+### Generate synthetic data
+
+```bash
+# optional: python venv
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r scripts/requirements.txt
+
+# write JSONL files to data/synthetic/
+python scripts/synthesize_data.py
+```
+
+### Merge to SFT format (chat)
+
+```bash
+python scripts/merge_for_sft.py
+# writes data/train_sft.jsonl
+```
+
+### Quick eval against the running app
+
+```bash
+# with `npm run dev` running
+python scripts/eval_extract_http.py
+# or point to a different host/port:
+API_BASE=http://192.168.1.197:3000 python scripts/eval_extract_http.py
+```
+
+### Fine-tune (overview)
+
+- Use **QLoRA** (PEFT) on `gpt-oss-20b` with `data/train_sft.jsonl`.
+- Export an **adapter** or **merge** to full weights, then create an **Ollama** model tag (e.g., `terraguard-ft:20b`).
+- In the UI, switch Model → **Fine** to run the new tag.
+  _(Training scripts/config will be provided in a follow-up if you include this repo in a hackathon submission.)_
+
+---
+
+## Accessibility & mobile
+
+- **MUI** components with labels (`aria-*`) and sensible contrast (dark theme).
+- Forms use native inputs with **keyboard** and **screen-reader**-friendly patterns.
+- Layout uses **responsive** stacks: action buttons spill gracefully to full-width on phones.
+- Text areas and result panels respect **prefers-reduced-motion** (no motion added by default).
+
+---
+
+## Troubleshooting
+
+- **“Model did not return valid JSON”**
+
+  - Try **Ensemble** (more robust).
+  - Ensure your local model tag exists and responds (`curl http://127.0.0.1:11434/api/tags`).
+  - The parser handles code fences / partials, but garbage in → garbage out; try a shorter input.
+
+- **`URLError: [Errno 61] Connection refused` (eval script)**
+
+  - Run `npm run dev` and verify `http://localhost:3000` is reachable.
+  - If using a different URL, set `API_BASE` or `--base`.
+
+- **Hydration mismatch / MUI style warnings**
+
+  - We render heavy MUI pages **client-only** (`dynamic(..., { ssr: false })`) to avoid SSR style drift.
+  - Ensure you’re importing `@mui/material-nextjs/v15-appRouter` in `layout.tsx`.
+
+- **Ollama port already in use**
+
+  - Another instance is running; that’s fine. Otherwise kill the process using port `11434`.
+
+---
+
+## Why this architecture?
+
+- **Local-first**: API calls never leave your machine; models, data, and evals are offline.
+- **Strict schemas**: JSON Schema + robust parsing reduce failure modes and help training converge.
+- **Modular AI**: Clear separation between **UI**, **Redux state**, and **model backends** through **API routes**. Makes swapping Base → Fine trivial.
+- **Judge-friendly**: A/B compare, metrics on `/eval`, and a clean 3-minute demo path.
+
+---
+
+## Contributing
+
+- Keep any new UI elements **accessible**, labeled, and keyboard-friendly.
+- When adding AI features, prefer **strict JSON outputs** + **schemas**.
+- For larger datasets, place them under `data/` (never `public/` unless they must be served in the browser).
+
+---
+
+## License
+
+See [LICENSE](./LICENSE). Consider releasing your fine-tune weights under an OSS-friendly license if possible.
+
+---
+
+### Appendix: API contracts (for external integrations)
+
+- `POST /api/extract`
+
+  ```json
+  // req
+  { "text": "free form incident text", "model": "optional-ollama-tag" }
+
+  // res
+  { "reports": [ { "location_text": "...", "time_iso": null, "severity": "high", "needs": ["medical","rescue"], "notes": null } ] }
+  ```
+
+- `POST /api/extract/ensemble`
+
+  ```json
+  { "text": "...", "samples": 3 }
+  ```
+
+- `POST /api/extract/stream`
+  Returns **NDJSON** lines with `{type:"token"|"parsed"|"status"|"error", ...}`.
