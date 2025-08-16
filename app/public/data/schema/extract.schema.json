@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Terraguard Extract Schema",
+  "type": "object",
+  "required": ["reports"],
+  "properties": {
+    "reports": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["location_text", "time_iso", "severity", "needs"],
+        "properties": {
+          "location_text": { "type": ["string", "null"], "maxLength": 200 },
+          "time_iso": {
+            "type": ["string", "null"],
+            "pattern": "^(\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2})?(?:Z|[+-]\\d{2}:\\d{2}))$"
+          },
+          "severity": {
+            "type": ["string", "null"],
+            "enum": ["low", "moderate", "high", "critical", null]
+          },
+          "needs": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "maxItems": 10
+          },
+          "dedupe_key": { "type": ["string", "null"], "maxLength": 120 },
+          "notes": { "type": ["string", "null"], "maxLength": 500 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

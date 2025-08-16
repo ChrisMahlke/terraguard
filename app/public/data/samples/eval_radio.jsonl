@@ -1,0 +1,2 @@
+{"report":{"id":"r3","location_text":"1200 Cedar St apt 3B","time_iso":null,"severity":"high","needs":["fire"],"notes":"evacuation ongoing"}}
+{"report":{"id":"r4","location_text":"5th & Main","time_iso":null,"severity":"critical","needs":["medical","rescue"],"notes":null}}

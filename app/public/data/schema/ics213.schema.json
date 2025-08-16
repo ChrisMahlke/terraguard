@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ICS-213 JSON",
+  "type": "object",
+  "required": ["to", "from", "subject", "message", "approved_by", "date_time"],
+  "properties": {
+    "to": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "from": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "subject": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "message": { "type": "string", "minLength": 1, "maxLength": 1200 },
+    "approved_by": { "type": ["string", "null"], "maxLength": 80 },
+    "date_time": {
+      "type": "string",
+      "pattern": "^(\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2})?(?:Z|[+-]\\d{2}:\\d{2}))$"
+    }
+  },
+  "additionalProperties": false"
+}

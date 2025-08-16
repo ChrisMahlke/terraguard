@@ -1,0 +1,76 @@
+{
+  "facilities": [
+    {
+      "id": "hosp-emerald",
+      "type": "hospital",
+      "name": "Emerald General Hospital",
+      "address": "1200 Cedar St",
+      "phone": "+1-206-555-0101",
+      "notes": "24/7 ER; CT scanner; helipad",
+      "capabilities": ["er", "trauma", "ct", "surgery", "icu", "helipad"]
+    },
+    {
+      "id": "hosp-riverside",
+      "type": "hospital",
+      "name": "Riverside Medical Center",
+      "address": "400 Riverside Dr",
+      "phone": "+1-206-555-0102",
+      "notes": "Level II trauma; pediatric beds",
+      "capabilities": ["er", "trauma", "pediatric", "icu"]
+    },
+    {
+      "id": "shelter-franklin",
+      "type": "shelter",
+      "name": "Franklin High Gym Shelter",
+      "address": "301 Panther Way",
+      "phone": "+1-206-555-0103",
+      "notes": "Capacity ~300; cots and blankets",
+      "capabilities": ["shelter", "cots", "blankets", "charging"]
+    },
+    {
+      "id": "shelter-community",
+      "type": "shelter",
+      "name": "Community Center Shelter",
+      "address": "77 Maple Ave",
+      "phone": "+1-206-555-0104",
+      "notes": "Pet-friendly area",
+      "capabilities": ["shelter", "pets", "accessible", "showers"]
+    },
+    {
+      "id": "fire-central",
+      "type": "fire",
+      "name": "Central Fire Station",
+      "address": "10 Main St",
+      "phone": "+1-206-555-0105",
+      "notes": "Urban search & rescue team",
+      "capabilities": ["firefighting", "usar", "rope", "hazmat"]
+    },
+    {
+      "id": "police-precinct1",
+      "type": "police",
+      "name": "1st Precinct Police",
+      "address": "50 Oak St",
+      "phone": "+1-206-555-0106",
+      "notes": "Crowd control & perimeter",
+      "capabilities": ["crowd-control", "perimeter", "traffic"]
+    },
+    {
+      "id": "publicworks-yard",
+      "type": "public-works",
+      "name": "Public Works Operations Yard",
+      "address": "900 Industrial Rd",
+      "phone": "+1-206-555-0107",
+      "notes": "Heavy equipment; sandbags; pumps",
+      "capabilities": ["heavy-equipment", "debris", "pumps", "sandbags"]
+    },
+    {
+      "id": "utility-power",
+      "type": "utility",
+      "name": "City Electric Utility",
+      "address": "415 Grid Ave",
+      "phone": "+1-206-555-0108",
+      "notes": "Downed lines; substation outages",
+      "capabilities": ["linecrew", "electric", "substation"]
+    }
+  ]
+}
