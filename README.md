@@ -2,9 +2,9 @@
 
 **Terraguard** is an offline-first disaster response triage tool. It runs locally, turns messy incident text (SMS, radio, social) into **strict JSON**, **ICS forms**, and **concise radio phrasing**, and can swap in a **LoRA-fine-tuned model** that improves extraction on NFIRS-style fire incidents.
 
-- **Best Local Agent**: usable without internet (everything can run on your laptop or a single GCP VM).
-- **Most Useful Fine-Tune**: we include a full recipe to fine-tune a small model on cause codes and wire it into the app.
-- **Design & Safety**: schema-only outputs, clear abstentions, no hallucinated coordinates.
+- Usable without internet (everything can run on your laptop or a single GCP VM).
+- Includes a full recipe to fine-tune a small model on cause codes and wire it into the app.
+- Schema-only outputs, clear abstentions, no hallucinated coordinates.
 
 ---
 
@@ -33,6 +33,15 @@
   - [Evaluate accuracy \& latency](#evaluate-accuracy--latency)
   - [Operate safely \& keep costs down](#operate-safely--keep-costs-down)
   - [FAQ / Troubleshooting](#faq--troubleshooting)
+    - [DuckDB “FDID INTEGER” error](#duckdb-fdid-integer-error)
+    - [HF 401 / RepositoryNotFound](#hf-401--repositorynotfound)
+    - [Transformers/tokenizers version mismatch](#transformerstokenizers-version-mismatch)
+    - [CUDA OOM on 20B](#cuda-oom-on-20b)
+    - [Server responds with your prompt (echo)](#server-responds-with-your-prompt-echo)
+    - [Tunnel shows no output](#tunnel-shows-no-output)
+    - [“/health Not Found”](#health-not-found)
+    - [`element 0 of tensors does not require grad`](#element-0-of-tensors-does-not-require-grad)
+    - [Priors JSON “extra data”](#priors-json-extra-data)
   - [Why this is useful](#why-this-is-useful)
   - [License](#license)
 
@@ -42,7 +51,7 @@
 
 Paste an incident like:
 
-```
+```txt
 Bridge on Pine St is cracked, 2:15pm, 5 people trapped on the south side, need medical and rescue.
 ```
 
@@ -52,7 +61,7 @@ Click **Extract** and Terraguard returns **strict JSON** under our schema, then 
 
 ## Architecture
 
-```
+```txt
 terraguard/
 ├─ src/app/                   # Next.js App Router + API routes
 │  ├─ api/                    # /api/extract*, /api/causes, etc.
@@ -95,7 +104,7 @@ terraguard/
 - Python **>= 3.10**
 - (Optional for data steps) DuckDB: `brew install duckdb`
 
-**1) Install and run the app**
+1. Install and run the app
 
 ```bash
 # from project root
@@ -111,7 +120,7 @@ npm run dev
 # open http://localhost:3000
 ```
 
-**2) Try the UI**
+2. Try the UI
 
 - Paste any short incident sentence, click **Extract**.
 - Open **Compare** to run Base vs Ensemble vs (later) Fine.
@@ -127,7 +136,7 @@ The public NFIRS-style file is caret-delimited (`^`), with quoted fields and a h
 
 **Put the file here:**
 
-```
+```txt
 data/raw/causes_2024.txt
 ```
 
@@ -401,7 +410,7 @@ npm run dev
 
 **Copy/paste incident you can use:**
 
-```
+```txt
 Incident record:
 STATE=MA
 FDID=09298
@@ -471,23 +480,23 @@ gcloud compute instances delete terraguard-train-1 --zone us-central1-a
 
 ## FAQ / Troubleshooting
 
-**DuckDB “FDID INTEGER” error**
+### DuckDB “FDID INTEGER” error
 
 - Ensure **FDID** is cast to `VARCHAR` in the DuckDB `COPY` query above.
 
-**HF 401 / RepositoryNotFound**
+### HF 401 / RepositoryNotFound
 
 - Run `hf auth login` and paste a valid token (Settings → Access Tokens on HF).
 
-**Transformers/tokenizers version mismatch**
+### Transformers/tokenizers version mismatch
 
 - We tested with: `transformers==4.55.2`, `trl==0.21.0`, `peft>=0.17.0`, `accelerate>=1.0.0`, `bitsandbytes==0.47.0`.
 
-**CUDA OOM on 20B**
+### CUDA OOM on 20B
 
 - Use **Qwen2.5-7B-Instruct** for this recipe on an **L4**. 20B models won’t fit comfortably on a single L4 for fine-tuning/inference without heavier quantization/offload tricks.
 
-**Server responds with your prompt (echo)**
+### Server responds with your prompt (echo)
 
 - You likely hit the **wrong route**. Use the wrapper:
 
@@ -498,19 +507,19 @@ gcloud compute instances delete terraguard-train-1 --zone us-central1-a
 
 - In the UI `.env.local`, ensure `NEXT_PUBLIC_FT_BASE=http://127.0.0.1:8000`.
 
-**Tunnel shows no output**
+### Tunnel shows no output
 
 - That’s normal for `-N -L`. Keep the window open. If closed, the UI can’t reach the VM.
 
-**“/health Not Found”**
+### “/health Not Found”
 
 - The sample server exposes `/api/generate`. Use that route.
 
-**`element 0 of tensors does not require grad`**
+### `element 0 of tensors does not require grad`
 
 - If you continue training, ensure you load the adapter and **re-enable adapters** (our `train_continue_pcc.py` does this for you).
 
-**Priors JSON “extra data”**
+### Priors JSON “extra data”
 
 - You may have accidentally written multiple JSON objects into one file. Our script writes **JSONL** (one object per line).
 
