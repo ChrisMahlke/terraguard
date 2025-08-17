@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large local datasets
+data/raw/*
+data/processed/*
+data/working/*
+# Keep tiny samples in git:
+!data/samples/**
