@@ -1,0 +1,35 @@
+{"PCC":22,"CAUSE_CODE":"14","CAUSE_NAME":"Equipment Misoperation/Failure","GCC":"03","GCC_NAME":"Equipment","n":2494}
+{"PCC":27,"CAUSE_CODE":"08","CAUSE_NAME":"Open Flame","GCC":"05","GCC_NAME":"Flame/Heat","n":3109}
+{"PCC":32,"CAUSE_CODE":"09","CAUSE_NAME":"Other Heat","GCC":"05","GCC_NAME":"Flame/Heat","n":4871}
+{"PCC":18,"CAUSE_CODE":"08","CAUSE_NAME":"Open Flame","GCC":"05","GCC_NAME":"Flame/Heat","n":1008}
+{"PCC":37,"CAUSE_CODE":"13","CAUSE_NAME":"Unknown","GCC":"07","GCC_NAME":"Unknown","n":46397}
+{"PCC":15,"CAUSE_CODE":"07","CAUSE_NAME":"Appliances","GCC":"03","GCC_NAME":"Equipment","n":4481}
+{"PCC":13,"CAUSE_CODE":"07","CAUSE_NAME":"Appliances","GCC":"03","GCC_NAME":"Equipment","n":2674}
+{"PCC":26,"CAUSE_CODE":"06","CAUSE_NAME":"Electrical Malfunction","GCC":"04","GCC_NAME":"Electrical","n":10099}
+{"PCC":38,"CAUSE_CODE":"16","CAUSE_NAME":"Cause Under Investigation","GCC":"07","GCC_NAME":"Unknown","n":2777}
+{"PCC":8,"CAUSE_CODE":"09","CAUSE_NAME":"Other Heat","GCC":"05","GCC_NAME":"Flame/Heat","n":286}
+{"PCC":7,"CAUSE_CODE":"09","CAUSE_NAME":"Other Heat","GCC":"05","GCC_NAME":"Flame/Heat","n":610}
+{"PCC":39,"CAUSE_CODE":"13","CAUSE_NAME":"Unknown","GCC":"07","GCC_NAME":"Unknown","n":4746}
+{"PCC":28,"CAUSE_CODE":"08","CAUSE_NAME":"Open Flame","GCC":"05","GCC_NAME":"Flame/Heat","n":6}
+{"PCC":31,"CAUSE_CODE":"08","CAUSE_NAME":"Open Flame","GCC":"05","GCC_NAME":"Flame/Heat","n":6640}
+{"PCC":19,"CAUSE_CODE":"10","CAUSE_NAME":"Other Equipment","GCC":"03","GCC_NAME":"Equipment","n":741}
+{"PCC":30,"CAUSE_CODE":"09","CAUSE_NAME":"Other Heat","GCC":"05","GCC_NAME":"Flame/Heat","n":1056}
+{"PCC":24,"CAUSE_CODE":"15","CAUSE_NAME":"Other Unintentional/Careless","GCC":"07","GCC_NAME":"Unknown","n":18726}
+{"PCC":33,"CAUSE_CODE":"12","CAUSE_NAME":"Exposure","GCC":"06","GCC_NAME":"Exposure","n":564}
+{"PCC":21,"CAUSE_CODE":"15","CAUSE_NAME":"Other Unintentional/Careless","GCC":"07","GCC_NAME":"Unknown","n":6418}
+{"PCC":25,"CAUSE_CODE":"10","CAUSE_NAME":"Other Equipment","GCC":"03","GCC_NAME":"Equipment","n":457}
+{"PCC":16,"CAUSE_CODE":"10","CAUSE_NAME":"Other Equipment","GCC":"03","GCC_NAME":"Equipment","n":2243}
+{"PCC":34,"CAUSE_CODE":"13","CAUSE_NAME":"Unknown","GCC":"07","GCC_NAME":"Unknown","n":42022}
+{"PCC":3,"CAUSE_CODE":"12","CAUSE_NAME":"Exposure","GCC":"06","GCC_NAME":"Exposure","n":4149}
+{"PCC":29,"CAUSE_CODE":"09","CAUSE_NAME":"Other Heat","GCC":"05","GCC_NAME":"Flame/Heat","n":2716}
+{"PCC":36,"CAUSE_CODE":"02","CAUSE_NAME":"Playing with Heat Source","GCC":"01","GCC_NAME":"Firesetting","n":398}
+{"PCC":6,"CAUSE_CODE":"11","CAUSE_NAME":"Natural","GCC":"02","GCC_NAME":"Natural","n":5237}
+{"PCC":5,"CAUSE_CODE":"02","CAUSE_NAME":"Playing with Heat Source","GCC":"01","GCC_NAME":"Firesetting","n":342}
+{"PCC":9,"CAUSE_CODE":"03","CAUSE_NAME":"Smoking","GCC":"05","GCC_NAME":"Flame/Heat","n":4482}
+{"PCC":11,"CAUSE_CODE":"04","CAUSE_NAME":"Heating","GCC":"03","GCC_NAME":"Equipment","n":16550}
+{"PCC":12,"CAUSE_CODE":"05","CAUSE_NAME":"Cooking","GCC":"03","GCC_NAME":"Equipment","n":93381}
+{"PCC":20,"CAUSE_CODE":"10","CAUSE_NAME":"Other Equipment","GCC":"03","GCC_NAME":"Equipment","n":1982}
+{"PCC":14,"CAUSE_CODE":"06","CAUSE_NAME":"Electrical Malfunction","GCC":"04","GCC_NAME":"Electrical","n":7275}
+{"PCC":17,"CAUSE_CODE":"10","CAUSE_NAME":"Other Equipment","GCC":"03","GCC_NAME":"Equipment","n":239}
+{"PCC":4,"CAUSE_CODE":"01","CAUSE_NAME":"Intentional","GCC":"01","GCC_NAME":"Firesetting","n":13883}
+{"PCC":23,"CAUSE_CODE":"14","CAUSE_NAME":"Equipment Misoperation/Failure","GCC":"03","GCC_NAME":"Equipment","n":3875}

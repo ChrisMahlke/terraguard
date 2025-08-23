@@ -1,0 +1,42 @@
+/* src/app/globals.css */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  z-index: 10000;
+  background: #121821;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transform: translateY(-200%);
+  transition: transform 0.2s;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Improve focus visibility (keyboard users) */
+:focus-visible {
+  outline: 3px solid #2d81ff;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Respect reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

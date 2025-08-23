@@ -1,0 +1,2 @@
+{"report":{"id":"r1","location_text":"Bridge on Pine St","time_iso":"2025-08-15T14:15:00-07:00","severity":"high","needs":["medical","rescue"],"notes":null}}
+{"report":{"id":"r2","location_text":"senior center at 12th & Maple","time_iso":"2025-08-15T15:40:00-07:00","severity":"moderate","needs":["shelter","medical"],"notes":"power outage impacts oxygen"}}

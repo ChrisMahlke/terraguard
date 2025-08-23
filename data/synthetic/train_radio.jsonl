@@ -1,0 +1,150 @@
+{"task": "radio", "report": {"id": "synth", "location_text": "Pine St & 3rd", "time_iso": "2025-08-15T18:45-07:00", "severity": "low", "needs": ["logistics", "medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Senior Center", "time_iso": "2025-08-15T16:30-07:00", "severity": "high", "needs": ["medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "415 Maple Ave apt 7D", "time_iso": null, "severity": "high", "needs": ["food", "medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Community Hospital", "time_iso": null, "severity": "critical", "needs": ["medical", "rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "415 Main St apt 5C", "time_iso": null, "severity": "moderate", "needs": ["fire"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Lincoln Park", "time_iso": "2025-08-15T19:12-07:00", "severity": "low", "needs": ["rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "1200 Pine St apt 5C", "time_iso": null, "severity": "high", "needs": ["rescue", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Pine St & Broadway", "time_iso": "2025-08-15T18:50-07:00", "severity": "low", "needs": ["fire", "food", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Community Hospital at Main St", "time_iso": null, "severity": "high", "needs": ["shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Birch Rd & Main", "time_iso": "2025-08-15T19:40-07:00", "severity": "low", "needs": ["food", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Senior Center", "time_iso": null, "severity": "low", "needs": ["fire", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "415 Birch Rd apt 5C", "time_iso": null, "severity": "high", "needs": ["water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Transit Hub at Pine St", "time_iso": null, "severity": "high", "needs": ["fire", "rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Maple Ave & Main", "time_iso": "2025-08-15T17:11-07:00", "severity": "low", "needs": ["fire", "logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Warehouse D12", "time_iso": "2025-08-15T18:30-07:00", "severity": "moderate", "needs": ["shelter", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Main St & Broadway", "time_iso": "2025-08-15T16:40-07:00", "severity": "critical", "needs": ["water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Birch Rd & Main", "time_iso": null, "severity": "moderate", "needs": ["logistics", "medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Riverside School", "time_iso": "2025-08-15T20:00-07:00", "severity": "low", "needs": ["fire", "food", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on Main St", "time_iso": "2025-08-15T18:15-07:00", "severity": "high", "needs": ["medical", "shelter", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "415 Oak Ave apt 5C", "time_iso": "2025-08-15T19:38-07:00", "severity": "low", "needs": ["fire", "logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Maple Ave & 1st", "time_iso": null, "severity": "moderate", "needs": ["shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "544 Maple Ave apt 2A", "time_iso": "2025-08-15T20:25-07:00", "severity": "moderate", "needs": ["shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on Birch Rd", "time_iso": "2025-08-15T20:40-07:00", "severity": "low", "needs": ["medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Warehouse D12", "time_iso": "2025-08-15T19:46-07:00", "severity": "low", "needs": ["logistics", "medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Lincoln Park", "time_iso": "2025-08-15T18:10-07:00", "severity": "low", "needs": ["logistics", "medical", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on Pine St", "time_iso": "2025-08-15T17:40-07:00", "severity": "high", "needs": ["food", "medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Lincoln Park", "time_iso": "2025-08-15T16:44-07:00", "severity": "moderate", "needs": ["food", "rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Lincoln Park at Main St", "time_iso": "2025-08-15T15:58-07:00", "severity": "moderate", "needs": ["water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Senior Center at Oak Ave", "time_iso": null, "severity": "low", "needs": ["fire"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Senior Center", "time_iso": "2025-08-15T16:30-07:00", "severity": "moderate", "needs": ["fire", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "415 Maple Ave apt 2A", "time_iso": "2025-08-15T15:55-07:00", "severity": "critical", "needs": ["fire", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on Oak Ave", "time_iso": "2025-08-15T16:40-07:00", "severity": "low", "needs": ["medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Community Hospital", "time_iso": "2025-08-15T18:30-07:00", "severity": "critical", "needs": ["rescue", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on 1st Ave", "time_iso": "2025-08-15T20:05-07:00", "severity": "high", "needs": ["food", "medical", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Riverside School", "time_iso": "2025-08-15T16:22-07:00", "severity": "moderate", "needs": ["rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "901 5th St apt 2A", "time_iso": null, "severity": "low", "needs": ["food", "medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Community Hospital", "time_iso": "2025-08-15T17:46-07:00", "severity": "critical", "needs": ["logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Cedar St & 1st", "time_iso": "2025-08-15T17:55-07:00", "severity": "high", "needs": ["rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on Oak Ave", "time_iso": "2025-08-15T19:40-07:00", "severity": "critical", "needs": ["medical", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Riverside School at Maple Ave", "time_iso": "2025-08-15T16:19-07:00", "severity": "moderate", "needs": ["fire", "logistics", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Transit Hub at Main St", "time_iso": "2025-08-15T18:35-07:00", "severity": "low", "needs": ["food", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Warehouse D12", "time_iso": "2025-08-15T19:16-07:00", "severity": "critical", "needs": ["fire", "logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Pine St & 2nd", "time_iso": null, "severity": "low", "needs": ["fire", "food"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Lincoln Park at 5th St", "time_iso": "2025-08-15T17:25-07:00", "severity": "moderate", "needs": ["fire", "food", "logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "415 5th St apt 3B", "time_iso": "2025-08-15T18:09-07:00", "severity": "critical", "needs": ["food"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Lincoln Park", "time_iso": null, "severity": "low", "needs": ["fire"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Community Hospital at Main St", "time_iso": "2025-08-15T18:48-07:00", "severity": "moderate", "needs": ["water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "33 Pine St apt 5C", "time_iso": "2025-08-15T17:30-07:00", "severity": "low", "needs": ["water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "33 Oak Ave apt 2A", "time_iso": "2025-08-15T20:05-07:00", "severity": "critical", "needs": ["logistics", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Lincoln Park", "time_iso": null, "severity": "moderate", "needs": ["shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Main St & Main", "time_iso": "2025-08-15T20:45-07:00", "severity": "critical", "needs": ["logistics", "medical", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Senior Center at Cedar St", "time_iso": "2025-08-15T19:26-07:00", "severity": "moderate", "needs": ["medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on Birch Rd", "time_iso": "2025-08-15T19:35-07:00", "severity": "high", "needs": ["medical", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Riverside School", "time_iso": "2025-08-15T17:00-07:00", "severity": "high", "needs": ["rescue", "shelter", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Community Hospital", "time_iso": "2025-08-15T20:35-07:00", "severity": "low", "needs": ["shelter", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "1st Ave & Main", "time_iso": null, "severity": "high", "needs": ["medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Lincoln Park", "time_iso": "2025-08-15T16:21-07:00", "severity": "moderate", "needs": ["food", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on 5th St", "time_iso": null, "severity": "moderate", "needs": ["rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Community Hospital at Pine St", "time_iso": null, "severity": "high", "needs": ["shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on Main St", "time_iso": "2025-08-15T16:25-07:00", "severity": "moderate", "needs": ["fire", "logistics", "medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Warehouse D12", "time_iso": null, "severity": "moderate", "needs": ["fire", "food", "rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "33 Birch Rd apt 2A", "time_iso": "2025-08-15T17:27-07:00", "severity": "critical", "needs": ["rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Warehouse D12", "time_iso": "2025-08-15T20:35-07:00", "severity": "moderate", "needs": ["food"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Lincoln Park", "time_iso": "2025-08-15T19:00-07:00", "severity": "low", "needs": ["fire"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Birch Rd & Broadway", "time_iso": null, "severity": "high", "needs": ["shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Transit Hub", "time_iso": "2025-08-15T20:06-07:00", "severity": "high", "needs": ["medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Transit Hub at Main St", "time_iso": "2025-08-15T19:50-07:00", "severity": "high", "needs": ["logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Birch Rd & 1st", "time_iso": "2025-08-15T17:06-07:00", "severity": "high", "needs": ["fire"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "544 Maple Ave apt 5C", "time_iso": "2025-08-15T17:27-07:00", "severity": "critical", "needs": ["shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Riverside School at Cedar St", "time_iso": null, "severity": "moderate", "needs": ["fire", "rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Senior Center", "time_iso": "2025-08-15T19:25-07:00", "severity": "moderate", "needs": ["shelter", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Warehouse D12", "time_iso": "2025-08-15T17:15-07:00", "severity": "moderate", "needs": ["medical", "rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on Oak Ave", "time_iso": null, "severity": "critical", "needs": ["rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Riverside School", "time_iso": null, "severity": "high", "needs": ["fire", "logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Maple Ave & 1st", "time_iso": null, "severity": "low", "needs": ["logistics", "rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Lincoln Park", "time_iso": null, "severity": "critical", "needs": ["food", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Main St & Main", "time_iso": null, "severity": "low", "needs": ["fire", "logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Oak Ave & 2nd", "time_iso": "2025-08-15T19:01-07:00", "severity": "high", "needs": ["logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Riverside School at 5th St", "time_iso": "2025-08-15T16:20-07:00", "severity": "high", "needs": ["logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Riverside School at Main St", "time_iso": "2025-08-15T17:25-07:00", "severity": "moderate", "needs": ["medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Community Hospital", "time_iso": null, "severity": "high", "needs": ["rescue", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Community Hospital", "time_iso": "2025-08-15T19:07-07:00", "severity": "moderate", "needs": ["fire"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Riverside School at Birch Rd", "time_iso": "2025-08-15T17:01-07:00", "severity": "moderate", "needs": ["shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Riverside School at Birch Rd", "time_iso": "2025-08-15T18:57-07:00", "severity": "high", "needs": ["food", "logistics", "rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Transit Hub", "time_iso": "2025-08-15T17:50-07:00", "severity": "high", "needs": ["fire", "food", "logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "5th St & 3rd", "time_iso": null, "severity": "high", "needs": ["fire", "food", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Warehouse D12", "time_iso": "2025-08-15T19:10-07:00", "severity": "high", "needs": ["medical", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "33 Oak Ave apt 7D", "time_iso": null, "severity": "moderate", "needs": ["rescue", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "33 Cedar St apt 7D", "time_iso": null, "severity": "low", "needs": ["food"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Riverside School", "time_iso": "2025-08-15T17:52-07:00", "severity": "moderate", "needs": ["rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "1st Ave & 2nd", "time_iso": "2025-08-15T20:51-07:00", "severity": "critical", "needs": ["fire"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "1st Ave & Broadway", "time_iso": null, "severity": "moderate", "needs": ["rescue", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Warehouse D12 at Cedar St", "time_iso": "2025-08-15T18:56-07:00", "severity": "high", "needs": ["rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Oak Ave & Main", "time_iso": "2025-08-15T19:01-07:00", "severity": "high", "needs": ["food", "rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Warehouse D12", "time_iso": "2025-08-15T17:14-07:00", "severity": "high", "needs": ["logistics", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "5th St & 1st", "time_iso": "2025-08-15T20:35-07:00", "severity": "low", "needs": ["fire"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on Birch Rd", "time_iso": "2025-08-15T20:20-07:00", "severity": "moderate", "needs": ["food", "rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "1200 Maple Ave apt 2A", "time_iso": "2025-08-15T19:33-07:00", "severity": "critical", "needs": ["medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Community Hospital", "time_iso": "2025-08-15T17:17-07:00", "severity": "moderate", "needs": ["logistics", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "33 Oak Ave apt 3B", "time_iso": null, "severity": "high", "needs": ["fire", "medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Warehouse D12", "time_iso": "2025-08-15T17:10-07:00", "severity": "moderate", "needs": ["medical", "rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Senior Center", "time_iso": null, "severity": "low", "needs": ["shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Lincoln Park", "time_iso": null, "severity": "critical", "needs": ["logistics", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Lincoln Park", "time_iso": null, "severity": "low", "needs": ["food"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Warehouse D12 at Main St", "time_iso": null, "severity": "high", "needs": ["logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Warehouse D12", "time_iso": "2025-08-15T19:15-07:00", "severity": "high", "needs": ["medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "544 Main St apt 7D", "time_iso": "2025-08-15T18:40-07:00", "severity": "moderate", "needs": ["rescue", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Maple Ave & Main", "time_iso": "2025-08-15T16:50-07:00", "severity": "low", "needs": ["logistics", "medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Lincoln Park at Main St", "time_iso": "2025-08-15T17:07-07:00", "severity": "critical", "needs": ["fire", "logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Lincoln Park", "time_iso": null, "severity": "low", "needs": ["fire", "logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Pine St & 1st", "time_iso": "2025-08-15T17:00-07:00", "severity": "moderate", "needs": ["logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Lincoln Park", "time_iso": null, "severity": "critical", "needs": ["water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on Pine St", "time_iso": "2025-08-15T16:30-07:00", "severity": "low", "needs": ["fire", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Pine St & 3rd", "time_iso": "2025-08-15T19:41-07:00", "severity": "critical", "needs": ["medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "1200 Birch Rd apt 3B", "time_iso": null, "severity": "moderate", "needs": ["fire", "food", "rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on Main St", "time_iso": null, "severity": "high", "needs": ["water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Riverside School", "time_iso": "2025-08-15T17:05-07:00", "severity": "moderate", "needs": ["food"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Riverside School", "time_iso": "2025-08-15T16:50-07:00", "severity": "critical", "needs": ["food", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on Cedar St", "time_iso": "2025-08-15T17:34-07:00", "severity": "moderate", "needs": ["medical", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on 5th St", "time_iso": "2025-08-15T18:53-07:00", "severity": "high", "needs": ["logistics", "medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Senior Center", "time_iso": null, "severity": "moderate", "needs": ["logistics", "rescue", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on Maple Ave", "time_iso": null, "severity": "critical", "needs": ["logistics", "rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "1st Ave & 2nd", "time_iso": "2025-08-15T16:05-07:00", "severity": "low", "needs": ["rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on Main St", "time_iso": null, "severity": "high", "needs": ["logistics", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Transit Hub", "time_iso": null, "severity": "moderate", "needs": ["logistics", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Riverside School at Main St", "time_iso": "2025-08-15T16:40-07:00", "severity": "moderate", "needs": ["rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "33 Maple Ave apt 7D", "time_iso": "2025-08-15T18:30-07:00", "severity": "high", "needs": ["food", "logistics", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "415 Main St apt 2A", "time_iso": null, "severity": "high", "needs": ["rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Warehouse D12", "time_iso": null, "severity": "critical", "needs": ["fire"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "33 Main St apt 2A", "time_iso": "2025-08-15T20:37-07:00", "severity": "low", "needs": ["water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "5th St & 1st", "time_iso": "2025-08-15T17:26-07:00", "severity": "critical", "needs": ["logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "901 Birch Rd apt 7D", "time_iso": "2025-08-15T19:30-07:00", "severity": "critical", "needs": ["shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Riverside School", "time_iso": "2025-08-15T20:51-07:00", "severity": "moderate", "needs": ["fire", "logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "901 Maple Ave apt 7D", "time_iso": null, "severity": "moderate", "needs": ["logistics", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "901 Pine St apt 5C", "time_iso": null, "severity": "low", "needs": ["fire", "food"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Riverside School", "time_iso": "2025-08-15T15:55-07:00", "severity": "low", "needs": ["medical", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Lincoln Park at 1st Ave", "time_iso": null, "severity": "high", "needs": ["rescue", "water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Community Hospital", "time_iso": "2025-08-15T19:20-07:00", "severity": "low", "needs": ["shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Community Hospital", "time_iso": "2025-08-15T16:56-07:00", "severity": "critical", "needs": ["logistics"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on 5th St", "time_iso": "2025-08-15T17:55-07:00", "severity": "critical", "needs": ["water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Warehouse D12 at Oak Ave", "time_iso": "2025-08-15T20:45-07:00", "severity": "high", "needs": ["fire"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Lincoln Park", "time_iso": "2025-08-15T17:36-07:00", "severity": "critical", "needs": ["water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "901 Birch Rd apt 3B", "time_iso": null, "severity": "moderate", "needs": ["logistics", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Bridge on 1st Ave", "time_iso": null, "severity": "low", "needs": ["fire", "medical"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "544 Pine St apt 3B", "time_iso": null, "severity": "high", "needs": ["food", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Behind Community Hospital", "time_iso": null, "severity": "low", "needs": ["food", "rescue"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Riverside School", "time_iso": "2025-08-15T17:36-07:00", "severity": "low", "needs": ["food"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Pine St & 3rd", "time_iso": null, "severity": "high", "needs": ["rescue", "shelter"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Birch Rd & 3rd", "time_iso": null, "severity": "high", "needs": ["water"], "notes": null}}
+{"task": "radio", "report": {"id": "synth", "location_text": "Riverside School", "time_iso": "2025-08-15T18:16-07:00", "severity": "high", "needs": ["water"], "notes": null}}
