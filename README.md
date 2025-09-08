@@ -102,9 +102,24 @@ terraguard/
 
 - Node.js **>= 20**
 - Python **>= 3.10**
+- **Ollama** (required for model serving): `brew install ollama`
 - (Optional for data steps) DuckDB: `brew install duckdb`
 
-1. Install and run the app
+1. Start Ollama and pull a model
+
+```bash
+# Start Ollama (if not already running)
+ollama serve
+
+# In another terminal, pull a model (choose one):
+ollama pull gpt-oss:20b        # 20B model (requires ~24GB RAM)
+# OR
+ollama pull qwen2.5:7b-instruct  # 7B model (requires ~8GB RAM)
+# OR  
+ollama pull llama3.2:3b        # 3B model (requires ~4GB RAM)
+```
+
+2. Install and run the app
 
 ```bash
 # from project root
@@ -112,6 +127,8 @@ npm install
 
 # configure local endpoints (create .env.local)
 cat > .env.local <<'ENV'
+# Ollama runs on 11434 by default
+OLLAMA_BASE=http://127.0.0.1:11434
 # If you run a local fine-tune server later, set this to http://127.0.0.1:8000
 NEXT_PUBLIC_FT_BASE=http://127.0.0.1:8000
 ENV
@@ -120,13 +137,54 @@ npm run dev
 # open http://localhost:3000
 ```
 
-2. Try the UI
+3. Try the UI with example prompts
 
-- Paste any short incident sentence, click **Extract**.
-- Open **Compare** to run Base vs Ensemble vs (later) Fine.
-- Open **/eval** for a mini batch validator & latency chart.
+- **General incident extraction:**
+  ```
+  Bridge on Pine St is cracked, 2:15pm, 5 people trapped on the south side, need medical and rescue.
+  ```
 
-> You can connect the Fine model later; the UI runs without it.
+- **Fire incident with NFIRS codes:**
+  ```
+  Incident record:
+  STATE=MA
+  FDID=09298
+  INC_DATE=2024-09-20
+  INC_NO=1252
+  EXP_NO=0
+  PCC=12
+  
+  Return JSON only.
+  ```
+
+- **Multi-incident scenario:**
+  ```
+  Multiple reports coming in: 
+  1) House fire on Oak Street at 3:45pm, 2 people trapped, need rescue and medical
+  2) Power lines down on Main St blocking traffic, no injuries reported
+  3) Flooding reported near the river, water rising fast, evacuate area
+  ```
+
+- **Radio traffic simulation:**
+  ```
+  Unit 7 responding to structure fire at 123 Elm Street, heavy smoke showing, requesting additional units and ladder truck. Time 14:30.
+  ```
+
+- **Social media style:**
+  ```
+  OMG there's a huge fire downtown! Smoke everywhere, people running. Called 911 but they're already here. Stay away from 5th and Main!
+  ```
+
+4. Test different model modes
+
+- **Base**: Uses your Ollama model directly
+- **Ensemble**: Runs multiple samples for confidence scoring  
+- **Fine-tuned**: Uses your custom LoRA adapter (when available)
+
+- Open **Compare** to run Base vs Ensemble side-by-side
+- Open **/eval** for batch validation & latency metrics
+
+> You can connect the Fine-tuned model later; the UI works with just Ollama.
 
 ---
 
